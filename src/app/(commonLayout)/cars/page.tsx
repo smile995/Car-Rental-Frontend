@@ -12,7 +12,7 @@ const Cars = async () => {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
       {/* Page Title */}
       <h1 className="md:text-5xl font-extrabold text-gray-900 dark:text-white drop-shadow-sm">
-        🚗 Explore Our Stunning Car Collection
+        Explore Our Stunning Car Collection
       </h1>
 
       {/* Cards Grid */}
@@ -23,7 +23,7 @@ const Cars = async () => {
             isHoverable
             isPressable
             shadow="lg"
-            className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-[1.03] hover:shadow-2xl"
+            className="relative w-full rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-[1.03] hover:shadow-2xl"
           >
             {/* Car Image */}
             <Image
