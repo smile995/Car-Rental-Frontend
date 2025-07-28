@@ -7,7 +7,6 @@ import nexiosInstance from "@/config/nexios.config";
 const LoginPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const form = e.target as HTMLFormElement;
     const email = (form.email as HTMLInputElement).value;
     const password = (form.password as HTMLInputElement).value;
@@ -16,12 +15,11 @@ const LoginPage = () => {
       password,
     };
 
-    const { data }: any = await nexiosInstance.post("/auth/login", payload, {
-      cache: "no-store",
-      next: {},
-    });
+    const { data } = await nexiosInstance.post("/auth/login", payload);
     console.log(data);
+    
   };
+
   return (
     <>
       <div className="min-h-screen flex justify-center items-center bg-gray-100">

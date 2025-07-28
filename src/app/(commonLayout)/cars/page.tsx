@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import nexiosInstance from "@/config/nexios.config";
 import { Card, CardFooter, Image, Link } from "@nextui-org/react";
+import Banner from "../components/page/home/Banner";
 
 const Cars = async () => {
   const { data }: any = await nexiosInstance.get("/cars", {
@@ -11,6 +12,7 @@ const Cars = async () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
       {/* Page Title */}
+      <Banner/>
       <h1 className="md:text-5xl font-extrabold text-gray-900 dark:text-white drop-shadow-sm">
         Explore Our Stunning Car Collection
       </h1>
@@ -53,28 +55,11 @@ const Cars = async () => {
               </div>
               <Link
                 href={`/cars/${item._id}`}
-                className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded-md shadow-md"
+                className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-medium font-semibold rounded-md shadow-md"
               >
-                View
+                View Details
               </Link>
             </CardFooter>
-
-            {/* Tags */}
-            {/* <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-green-600/80 text-white text-xs rounded-full shadow-sm">
-                {item.fuelType === "d"
-                  ? "Diesel"
-                  : item.fuelType === "p"
-                  ? "Petrol"
-                  : "Hybrid"}
-              </span>
-              <span className="px-2 py-1 bg-yellow-500/90 text-black text-xs rounded-full shadow-sm">
-                {item.condition}
-              </span>
-              <span className="px-2 py-1 bg-sky-600/80 text-white text-xs rounded-full shadow-sm">
-                Seats: {item.passengerCapacity}
-              </span>
-            </div> */}
           </Card>
         ))}
       </div>
