@@ -3,7 +3,7 @@ import BannerButton from "./BannerButton";
 import MotionCar from "./MotionCar";
 export default function Banner() {
   return (
-    <Card className="py-4 flex" shadow="none">
+    <Card className="py-4 flex " shadow="none">
       <CardBody className="overflow-visible py-2 ">
         <div className="flex items-center justify-between">
           <div className="w-2/5">
