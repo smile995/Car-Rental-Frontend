@@ -26,13 +26,14 @@ export default function NavBar() {
     { label: "Browse Cars", href: "/cars" },
     { label: "Offers", href: "/offers" },
     { label: "Contact Us", href: "/contact" },
+    { label: "Blogs", href: "/blogs" },
     { label: "About Us", href: "/about" },
-    { label: "Dashboard", href: routeMap.user }, // dynamic route from role
+    { label: "Dashboard", href: routeMap.user }, 
     { label: "Log Out", href: "/logout" },
     { label: "Login", href: "/login" },
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className="w-full" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -68,6 +69,11 @@ export default function NavBar() {
         <NavbarItem>
           <Link color="foreground" href="/about">
             About us
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/blogs">
+            Blogs
           </Link>
         </NavbarItem>
 
