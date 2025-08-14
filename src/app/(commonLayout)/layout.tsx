@@ -15,7 +15,7 @@ export default function DashboardLayout({
   return (
     <div>
       <NavBar></NavBar>
-      {children}
+      <div className="lg:mx-5">{children}</div>
       <Footer></Footer>
     </div>
   );

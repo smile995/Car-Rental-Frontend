@@ -5,9 +5,9 @@ export default function Banner() {
   return (
     <Card className="py-4 flex " shadow="none">
       <CardBody className="overflow-visible py-2 ">
-        <div className="flex items-center justify-between">
-          <div className="w-2/5">
-            <h1 className="text-6xl font-bold mb-2 text-default-900">
+        <div className="md:flex items-center justify-between">
+          <div className="md:w-2/5 w-full">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-2 text-default-900">
               Explore the Finest <span className="text-red-500">Global</span>{" "}
               Offers
             </h1>

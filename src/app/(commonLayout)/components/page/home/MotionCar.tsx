@@ -7,7 +7,7 @@ export default function MotionCar() {
       initial={{ x: 50 }}
       animate={{ y: 40, x: 0 }}
       transition={{ ease: "easeOut", duration: 2 }}
-      className="w-3/5 flex justify-end"
+      className="md:w-3/5 w-full flex justify-end"
     >
       <Image
         alt="Card background"

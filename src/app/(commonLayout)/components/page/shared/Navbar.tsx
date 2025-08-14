@@ -28,7 +28,7 @@ export default function NavBar() {
     { label: "Contact Us", href: "/contact" },
     { label: "Blogs", href: "/blogs" },
     { label: "About Us", href: "/about" },
-    { label: "Dashboard", href: routeMap.user }, 
+    { label: "Dashboard", href: routeMap.user },
     { label: "Log Out", href: "/logout" },
     { label: "Login", href: "/login" },
   ];
@@ -39,10 +39,12 @@ export default function NavBar() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <Cog className="text-blue-500" />
-          <p className="font-bold ml-1 text-inherit text-red-500">RideMate</p>
-        </NavbarBrand>
+        <Link href={"/"} >
+          <NavbarBrand>
+            <Cog className="text-blue-500" />
+            <p className="font-bold ml-1 text-inherit text-red-500">RideMate</p>
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
